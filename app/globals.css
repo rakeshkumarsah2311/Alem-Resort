@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+h1, h2, h3 {
+  font-family: var(--font-federo);
+}
+
+body {
+  color: #313131;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex justify-center items-center
+  }
+
+  .drop-shadow-primary {
+    filter: drop-shadow(0px 10px 20px rgba(180, 180, 180, 0.25))
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white px-4 py-1.5 lg:px-8 lg:py-2 border border-transparent font-medium hover:opacity-80
+  }
+
+  .btn-black {
+    @apply bg-black text-white px-4 py-1.5 lg:px-8 lg:py-2 border border-transparent font-medium hover:opacity-80 text-sm lg:text-base
+  }
+
+  .btn-outline {
+    @apply text-white px-5 lg:px-8 py-2 border border-white font-medium
+  }
+
+  .navlink {
+    @apply text-primary font-medium transition duration-300 border border-0 border-b border-transparent  hover:border-primary
+  }
+
+
+}
+
+
+
+@media (max-width : 768px) {
+  .itenary-overview-item:nth-of-type(5) {
+    transform: translateX(50%);
+  }
+}
+
+
+@layer base {
+ 
+  input {
+    @apply border border-gray-300 px-3 py-1 rounded-md w-full outline-none focus:border-green-500
+  }
+
+  label {
+    @apply font-medium
+  }
+}
+.react-calendar {
+  border: none !important;
+  filter: drop-shadow(0px 10px 20px rgba(180, 180, 180, 0.25))
+}
+.react-calendar__month-view__days__day--weekend {
+  color: inherit !important;
+}
+
+
+.success-toast {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-toast>div{
+ 
+  top : 50% !important;
+  left : 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+.swiper-slide {
+  height: 490px !important;
+}
+.swiper-slide img{
+  height: 100% !important;
+  object-fit: cover;
+  /* object-position: 0% 7%; */
+}
+
+@media (max-width : 768px) {
+  .swiper-slide {
+    height: 250px !important;
+  }
+
+}
+
+
+.contact-item:hover p{
+  color: #018B7F;
+}
